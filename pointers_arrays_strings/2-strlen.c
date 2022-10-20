@@ -18,7 +18,7 @@ int main(void)
 }
 
 /**
- * _strlen - finds the length
+ * _strlen - finds the length the length of a string
  * @s: pointer to string
  * Return: the length of a string.
  */
