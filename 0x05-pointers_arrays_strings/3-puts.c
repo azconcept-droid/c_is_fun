@@ -13,9 +13,9 @@ int main(void)
     return (0);
 }
 /**
-* main - check the code
+* _puts - print string to stdout.
 *
-* Return: Always 0.
+* Return: Nothing.
 */
 void _puts(char *str)
 {
