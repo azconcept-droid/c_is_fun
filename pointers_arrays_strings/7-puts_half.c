@@ -8,35 +8,40 @@ void puts_half(char *str);
 */
 int main(void)
 {
-    char *str;
-    str = "0123456789AB";
-    puts_half(str);
-    return (0);
+	char *str;
+
+	str = "0123456789AB";
+	puts_half(str);
+	return (0);
 }
 /**
-* main - check the code
-*
+* puts_half - prints half of a string, followed by a new line.
+* @str: pointer to the string
 * Return: Always 0.
 */
 void puts_half(char *str)
 {
-    char *r = str;
-    int n = 0;
+	char *r = str;
+	int n = 0;
 
-    /*To get the total characters int the string*/
-    while (*r++)
-        n++;
+	/*To get the total characters in the string*/
+	while (*r++)
+		n++;
 
-    if (n % 2 != 0)
-        n = (n - 1) / 2;
-    else
-        n = n / 2;
+	/*To get the half of the string length*/
+	if (n % 2 != 0) /*If odd*/
+		n = (n - 1) / 2;
+	else
+		n = n / 2;  /*if even*/
 
-    str = str + n;
-    while (*str)
-    {
-        write(1, str, 1);
-        str++;
-    }
-    write(1, "\n", 1);
+	/*Jump to the middle of the string*/
+	str = str + n;
+
+	/*Print string to standard output*/
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
+	write(1, "\n", 1);
 }
