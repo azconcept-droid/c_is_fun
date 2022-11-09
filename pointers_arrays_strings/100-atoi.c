@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 int _atoi(char *s);
 /**
 * main - check the code
@@ -9,17 +10,19 @@ int main(void)
 {
 	int nb;
 
-	nb = _atoi("98");
+	printf("%d\n", INT_MAX);
+	printf("%d\n", INT_MIN);
+	nb = _atoi("    98");
 	printf("%d\n", nb);
-	nb = _atoi("-402");
+	nb = _atoi("    -402");
 	printf("%d\n", nb);
 	nb = _atoi("214748364");
 	printf("%d\n", nb);
-	nb = _atoi("0");
+	nb = _atoi("    0");
 	printf("%d\n", nb);
 	nb = _atoi("azeez");
 	printf("%d\n", nb);
-	nb = _atoi("Suite 402");
+	nb = _atoi("       Suite 402");
 	printf("%d\n", nb);
 	/*nb = _atoi(" ------++++++-----+++++--98");
 	printf("%d\n", nb);
@@ -33,6 +36,10 @@ int main(void)
 int _atoi(char *s)
 {
 	int int_value = 0, sign = 1;
+
+	/*Ignore leading white spaces*/
+	while (*s == ' ')
+		s++;
 
 	/*If the first character is minus*/
 	if (*s == '-')
