@@ -14,7 +14,7 @@ int main(void)
 	return (0);
 }
 /**
-* puts2 - prints every other character of a string
+* puts2 - prints next 2 character of a string
 * @str: pointer to the string
 *
 * Description: prints every other character of a string,
@@ -25,8 +25,8 @@ void puts2(char *str)
 {
 	while (*str)
 	{
-		write(1, str, 1);
-		str = str + 2;
+		write(1, str, 1);	/*Print to stdout each time*/
+		str = str + 2;	/*Jump to next 2 character*/
 	}
-	write(1, "\n", 1);
+	write(1, "\n", 1);	/*Endline*/
 }

@@ -7,10 +7,11 @@ void _puts(char *str);
 */
 int main(void)
 {
-    char *str;
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(str);
-    return (0);
+	char *str;
+
+	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+	_puts(str);
+	return (0);
 }
 /**
 * _puts - print string to stdout.
@@ -19,10 +20,10 @@ int main(void)
 */
 void _puts(char *str)
 {
-    while (*str)
-    {
-        write(1, str, 1);
-        str++;
-    }
-    write(1, "\n", 1);
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
+	write(1, "\n", 1);
 }

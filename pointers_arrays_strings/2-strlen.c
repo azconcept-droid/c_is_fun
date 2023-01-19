@@ -8,13 +8,13 @@ int _strlen(char *s);
  */
 int main(void)
 {
-    char *str;
-    int len;
+	char *str;
+	int len;
 
-    str = "My first strlen!";
-    len = _strlen(str);
-    printf("%d\n", len);
-    return (0);
+	str = "My first strlen!";
+	len = _strlen(str);
+	printf("%d\n", len);
+	return (0);
 }
 
 /**
@@ -24,12 +24,12 @@ int main(void)
  */
 int _strlen(char *s)
 {
-    int i = 0;
+	int i = 0;
 
-    while (*s++)
-    {
-        i++;
-    }
+	while (*s++)
+	{
+		i++;
+	}
 
-    return (i);
+	return (i);
 }

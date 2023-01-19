@@ -7,10 +7,11 @@ void print_rev(char *s);
 */
 int main(void)
 {
-    char *str;
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    print_rev(str);
-    return (0);
+	char *str;
+
+	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+	print_rev(str);
+	return (0);
 }
 
 /**
@@ -20,16 +21,17 @@ int main(void)
 */
 void print_rev(char *s)
 {
-    char *r;
+	char *r;
 
-    r = s;
-    while (*r)
-        r++;
+	r = s;
+	/*Move new pointer r to extreme right*/
+	while (*r)
+		r++;
 
-    while (r != s - 1)
-    {
-        write(1, r, 1);
-        r--;
-    }
-    write(1, "\n", 1);
+	while (r != s - 1)  /*Check if r has gotten to the beginning*/
+	{
+		write(1, r, 1);
+		r--;    /*Move pointer r backward*/
+	}
+	write(1, "\n", 1);
 }

@@ -21,7 +21,7 @@ int main(void)
 */
 void puts_half(char *str)
 {
-	char *r = str;
+	char *r = str;	/*Pass the pointer to another pointer*/
 	int n = 0;
 
 	/*To get the total characters in the string*/

@@ -31,38 +31,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-int _strlen(char *str)
-{
-	int count = 0;
-
-	while (*str)
-	{
-		count++;
-		str++;
-	}
-	return (count);
-}
-
-char *_strncpy(char *dest, char *src, int n)
-{
-	int i, j = 0, k;
-
-	i = _strlen(src);
-
-	if (n <= i)
-	{
-		for (k = 0; k < n; k++, j++)
-		{
-			dest[j] = src[k];
-		}
-	}
-
-	if (n > i)
-	{
-		for (k = 0; k < i; k++, j++)
-			dest[j] = src[k];
-		for (; j < n; j++)
-			dest[j] = '\0';
-	}
-	return (dest);
-}
