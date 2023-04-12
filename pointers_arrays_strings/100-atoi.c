@@ -34,7 +34,7 @@ int main(void)
 int _atoi(char *s)
 {
 	int int_value = 0, sign = 1;
-	char nullflag = 0;
+	char stopflag = 0;
 
 	/*Ignore leading white spaces
 	while (*s == ' ')
@@ -51,10 +51,10 @@ int _atoi(char *s)
 		/*and letters extract the number*/
 		if (*s >= '0' && *s <= '9')
 		{
-			nullflag = 1;
+			stopflag = 1;
 			int_value = (int_value * 10) + (*s - '0');
 		}
-		else if (nullflag)
+		else if (stopflag)
 			break;
 		s++;
 	}
